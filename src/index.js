@@ -35,7 +35,7 @@ btnGif.addEventListener('submit', (event) => {
     getFetch(giphyUrl)
         .then(response => response.json())
         .then(handleGiphyResponse)
-        .catch(error => alert('GIF field cannot be empty'))
+        .catch(error => console.log(error))
 
     //clear out the inout field after every button press
     document.getElementById('GIF-search').value = "";
