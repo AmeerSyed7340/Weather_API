@@ -1,8 +1,7 @@
 import './style.css';
 import getFetch from './fetch';
 
-const loc = 'London';
-//let loc = prompt("Enter Location");
+
 
 const weatherApiKey = 'da1ebd2eac854464a2443220230208';
 const default_weatherUrl = `http://api.weatherapi.com/v1/current.json?key=${weatherApiKey}&q=New York`
@@ -62,21 +61,8 @@ btnGif.addEventListener('submit', async (event) => {
     event.preventDefault();
     let location = document.getElementById('GIF-search').value;
     
-    //const giphyUrl = `https://api.giphy.com/v1/gifs/translate?api_key=${giphyApiKey}&s=${gif}`;
-    const weatherUrl = `http://api.weatherapi.com/v1/current.json?key=${weatherApiKey}&q=${location}`
-    //now use the giphyUrl to make a fetch request to the giphy api
-    // const weatherData = await getFetch(weatherUrl);
-    // const condition = weatherData.current.condition.text;
-    // const feelsLike_c = weatherData.current.condition.feelslike_c;
-    // const feelsLike_f = weatherData.current.condition.feelslike_f;
-    // const humidity = weatherData.current.condition.humidity;
-    // const winds_mph = weatherData.current.condition.winds_mph;
-    // const localTime = weatherData.location.localtime;
     
-    // updateDisplayInfo(condition, feelsLike_c, feelsLike_f,humidity, winds_mph, localTime);
-    // const giphyUrl = `https://api.giphy.com/v1/gifs/translate?api_key=${giphyApiKey}&s=${condition}`;
-    // const gifData = await getFetch(giphyUrl);
-    // handleGiphyResponse(gifData);
+    const weatherUrl = `http://api.weatherapi.com/v1/current.json?key=${weatherApiKey}&q=${location}`
 
     callFetchAsync(weatherUrl);
     //clear out the inout field after every button press
